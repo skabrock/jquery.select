@@ -1,0 +1,4 @@
+$ ->
+
+  $('.divv').click ->
+    alert 'yahhoo'

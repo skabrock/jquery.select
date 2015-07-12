@@ -1,0 +1,23 @@
+{
+  "name": "jquery.select",
+  "version": "0.0.0",
+  "homepage": "https://github.com/skabrock/jquery.select",
+  "authors": [
+    "skabr <skabrock@gmail.com>"
+  ],
+  "main": "index.html",
+  "keywords": [
+    "select",
+    "selectbox",
+    "jquery.selectbox",
+    "input"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
