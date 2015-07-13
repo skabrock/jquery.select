@@ -1,2 +1,70 @@
-body {
-  background-color: #eeeeee; }
+.select-wrapper {
+  display: inline-block;
+  position: relative;
+  outline: none;
+  box-sizing: border-box;
+  vertical-align: middle; }
+
+.select-current {
+  display: block;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial;
+  font-size: 12px;
+  box-sizing: border-box; }
+  .select-current:after {
+    content: '';
+    display: table;
+    clear: both; }
+
+.select-title {
+  float: left;
+  padding: 1px 20px 1px 5px;
+  border: 1px solid #d8d8d8;
+  border-bottom: 1px solid #ABABAB;
+  box-sizing: border-box;
+  border-radius: 4px; }
+
+.select-arrow {
+  display: block;
+  float: left;
+  background-color: #2654FF;
+  width: 15px;
+  border-radius: 0 4px 4px 0;
+  border-top: 1px solid #1E45D5;
+  border-right: 1px solid #1E45D5;
+  border-bottom: 1px solid #1E45D5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+.select-list {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  outline: none;
+  position: absolute;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0px 1px 1px #BBBBBB;
+  border-radius: 5px;
+  font-family: Arial;
+  font-size: 12px;
+  line-height: 18px; }
+
+.select-option {
+  white-space: nowrap;
+  cursor: default;
+  padding: 0 15px;
+  position: relative; }
+  .select-option:hover {
+    background-color: #dddddd; }
+  .select-option.select-option--active:before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #000000; }
