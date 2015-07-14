@@ -13,32 +13,53 @@
   font-family: Arial
   font-size: 12px
   box-sizing: border-box
-  &:after
-    content: ''
-    display: table
-    clear: both
+  +clearfix
 
 .select-title
   float: left
   padding: 1px 20px 1px 5px
-  border: 1px solid #d8d8d8
-  border-bottom: 1px solid #ABABAB
+  border: 1px solid $grey_light
+  border-bottom: 1px solid $grey_medium
   box-sizing: border-box
   border-radius: 4px
 
 .select-arrow
   display: block
   float: left
-  background-color: #2654FF
+  background-color: $blue_light
+  +linear-gradient($blue_light, $blue_medium)
   width: 15px
   border-radius: 0 4px 4px 0
-  border-top: 1px solid #1E45D5
-  border-right: 1px solid #1E45D5
-  border-bottom: 1px solid #1E45D5
   position: absolute
   top: 0
   right: 0
   bottom: 0
+  &:before
+    content: ''
+    display: block
+    width: 4px
+    height: 4px
+    border-top: 1px solid $white
+    border-left: 1px solid $white
+    margin: -4px 0 0 -3px
+    +transform(rotate(45deg))
+    +transform-origin(center center)
+    position: absolute
+    top: 50%
+    left: 50%
+  &:after
+    content: ''
+    display: block
+    width: 4px
+    height: 4px
+    border-bottom: 1px solid $white
+    border-right: 1px solid $white
+    margin: -1px 0 0 -3px
+    +transform(rotate(45deg))
+    +transform-origin(center center)
+    position: absolute
+    top: 50%
+    left: 50%
 
 .select-list
   display: none
@@ -48,9 +69,10 @@
   background-color: $white
   outline: none
   position: absolute
-  border: 1px solid #d8d8d8
-  box-shadow: 0px 1px 1px #BBBBBB
-  border-radius: 5px
+  border: 1px solid $grey_medium
+  overflow: hidden
+  box-shadow: 0px 1px 10px rgba($black, .2)
+  border-radius: 6px
   font-family: Arial
   font-size: 12px
   line-height: 18px
@@ -60,8 +82,10 @@
   cursor: default
   padding: 0 15px
   position: relative
+  background-color: $milk
   &:hover
-    background-color: #dddddd
+    background-color: $blue
+    color: $white
   &.select-option--active
     &:before
       content: ''
